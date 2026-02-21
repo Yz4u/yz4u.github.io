@@ -185,8 +185,8 @@
         <div>
           <h2 class="tweak-title">LockAlive</h2>
           <div class="tweak-meta">
-            <span class="pill">Version 1.0.0</span>
-            <span class="pill">Last update 2026-02-21</span>
+            <span class="pill" id="lockalive-version">Version 1.0.0</span>
+            <span class="pill" id="lockalive-updated">Last update 2026-02-21</span>
           </div>
           <p class="tweak-desc">
             Keep SSH/Wi-Fi reachable while locked. Designed for users who run remote commands or file transfer during lock state.
@@ -198,5 +198,55 @@
       </article>
     </section>
   </main>
+  <script>
+    (function () {
+      const packageId = "com.yz4u.lockalive";
+      const versionEl = document.getElementById("lockalive-version");
+      const updatedEl = document.getElementById("lockalive-updated");
+
+      function pickVersionFromPackages(text, id) {
+        const stanzas = text.split(/\n\s*\n/);
+        for (const stanza of stanzas) {
+          const pkg = stanza.match(/^Package:\s*(.+)$/m);
+          if (!pkg || pkg[1].trim() !== id) {
+            continue;
+          }
+          const ver = stanza.match(/^Version:\s*(.+)$/m);
+          if (ver) {
+            return ver[1].trim();
+          }
+        }
+        return null;
+      }
+
+      function toYmd(dateText) {
+        const d = new Date(dateText);
+        if (Number.isNaN(d.getTime())) {
+          return null;
+        }
+        return d.toISOString().slice(0, 10);
+      }
+
+      Promise.allSettled([
+        fetch("./Packages", { cache: "no-store" }).then((r) => (r.ok ? r.text() : "")),
+        fetch("./Release", { cache: "no-store" }).then((r) => (r.ok ? r.text() : "")),
+      ]).then(([packagesRes, releaseRes]) => {
+        if (packagesRes.status === "fulfilled" && versionEl) {
+          const version = pickVersionFromPackages(packagesRes.value, packageId);
+          if (version) {
+            versionEl.textContent = "Version " + version;
+          }
+        }
+
+        if (releaseRes.status === "fulfilled" && updatedEl) {
+          const m = releaseRes.value.match(/^Date:\s*(.+)$/m);
+          const ymd = m ? toYmd(m[1].trim()) : null;
+          if (ymd) {
+            updatedEl.textContent = "Last update " + ymd;
+          }
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -226,6 +226,7 @@
 
       function pickVersionFromPackages(text, id) {
         const stanzas = text.split(/\n\s*\n/);
+        let latestVersion = null;
         for (const stanza of stanzas) {
           const pkg = stanza.match(/^Package:\s*(.+)$/m);
           if (!pkg || pkg[1].trim() !== id) {
@@ -233,10 +234,10 @@
           }
           const ver = stanza.match(/^Version:\s*(.+)$/m);
           if (ver) {
-            return ver[1].trim();
+            latestVersion = ver[1].trim();
           }
         }
-        return null;
+        return latestVersion;
       }
 
       function toYmd(dateText) {

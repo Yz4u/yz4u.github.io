@@ -3,16 +3,16 @@ Label: Yz4u Tweaks
 Suite: stable
 Version: 1.0
 Codename: ios
-Date: Sat, 21 Feb 2026 09:49:53 +0000
+Date: Sat, 21 Feb 2026 09:55:57 +0000
 Architectures: iphoneos-arm64
 Components: main
 Description: Yz4u JB Comfort Project repository
 MD5Sum:
- 9b3de094c138994607736397f7b7eca0 2741 Packages
- 7b33097594dd82e724b97a9cafd9d185 872 Packages.gz
+ f66de747258a50d003aa5bf5b6f221ee 3201 Packages
+ bc5d6ca0adf7bdf98d6dbe481c4ca02f 969 Packages.gz
 SHA1:
- e881715bcaf26449b70d58f299e698c7bdfd9271 2741 Packages
- 0d6d1bba55f6f1a7ed49137526d01531ea04064e 872 Packages.gz
+ e1b58a623f39075c011a27d60dce036524110688 3201 Packages
+ 1c4aa2cd8b2e0aaf73656850e07aa06ff9323e16 969 Packages.gz
 SHA256:
- 481134720ec8195c3f69b58efd2c21d6c6ff667cb4e8f15413c09d1f0c5d0853 2741 Packages
- b7c1c605e00aa56a4a4292d2ddddd8674f190fe6ab6b66b07b640998a6482f98 872 Packages.gz
+ 0beb1e8765b2f2e4b7db70555d020d3eaa5045c792867e2026ab86d59c8d16ec 3201 Packages
+ b5d89d08cb210d63eef26a5de33b9646c0e20a3a762b1d3851d53a1727ff78f9 969 Packages.gz

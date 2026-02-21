@@ -82,3 +82,17 @@ MD5sum: 16c20d6955dd6ffe6082cb58c57d3f4c
 SHA1: d2fff2caefc62b4581a0e84647fdd302ba8780be
 SHA256: 655e96adc6ad826081d9829c6ebe24c092fef872a8a0660eb3fb5e695d32a9f6
 
+Package: com.yz4u.lockalive
+Name: LockAlive
+Version: 1.0.6
+Architecture: iphoneos-arm64
+Maintainer: Yz4u Lab
+Section: Tweaks
+Depends: firmware (>= 15.0), ellekit, preferenceloader
+Description: Keep SSH/Wi-Fi alive while locked
+Filename: debs/com.yz4u.lockalive_1.0.6_iphoneos-arm64.deb
+Size: 10344
+MD5sum: e531467e2b8f30c65f6264c933f215cf
+SHA1: 5abefccabaeed7cd322f8c0323cb68df1fa8500b
+SHA256: 4eddc1e8e94be4a41fcfb90d8ac846ecf41b5c9d895b8b33dcaafb5d536763ed
+

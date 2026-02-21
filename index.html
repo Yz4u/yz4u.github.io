@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yz4u</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg-a: #edf1f6;
+      --bg-b: #f7fafc;
+      --card: rgba(255, 255, 255, 0.82);
+      --text: #0f1620;
+      --muted: #566273;
+      --line: rgba(15, 22, 32, 0.1);
+      --accent: #0a7d78;
+      --link: #0071e3;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, sans-serif;
+      background:
+        radial-gradient(900px 500px at 8% -10%, rgba(0, 113, 227, 0.14), transparent 60%),
+        radial-gradient(800px 460px at 95% 0%, rgba(10, 125, 120, 0.14), transparent 56%),
+        linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 100%);
+      color: var(--text);
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 16px 44px;
+    }
+    .hero {
+      margin-bottom: 16px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 26px 22px;
+      background: var(--card);
+      box-shadow: 0 18px 40px rgba(12, 19, 34, 0.1);
+      backdrop-filter: blur(10px);
+    }
+    .hero-title {
+      margin: 0;
+      font-size: clamp(30px, 7vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .lead {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.86);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(15, 22, 32, 0.14);
+      border-color: rgba(15, 22, 32, 0.22);
+    }
+    .btn svg {
+      width: 15px;
+      height: 15px;
+      display: block;
+      fill: currentColor;
+    }
+    .btn-icon {
+      width: 16px;
+      height: 16px;
+      display: block;
+      border-radius: 4px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(8px);
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: 0.01em;
+    }
+    p { margin: 0; color: var(--muted); }
+    ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    li { margin: 6px 0; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code {
+      background: #edf2f8;
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #243244;
+      font-size: 0.92em;
+    }
+    .full {
+      grid-column: 1 / -1;
+    }
+    .catalog {
+      margin-top: 14px;
+      display: grid;
+      gap: 12px;
+    }
+    .tweak-card {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 14px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+    }
+    .tweak-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      box-shadow: 0 10px 18px rgba(15, 22, 32, 0.14);
+    }
+    .tweak-title {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+    }
+    .tweak-meta {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      color: #314255;
+      background: rgba(255, 255, 255, 0.92);
+    }
+    .tweak-desc {
+      margin-top: 9px;
+      line-height: 1.45;
+    }
+    .tweak-links {
+      margin-top: 10px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    @media (max-width: 740px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .tweak-card {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+      main {
+        padding-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Easy For You</h1>
+      <p class="lead">iOS tweak Dev / AI agents Dev</p>
+      <div class="actions">
+        <a class="btn" href="sileo://source/https://yz4u.github.io/">
+          <img class="btn-icon" src="./assets/sileo-icon.png" alt="Sileo">
+          Add to Sileo
+        </a>
+        <a class="btn" href="https://x.com/Yz_4u" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.24 2H21.31L14.61 9.66L22.49 20H16.32L11.49 13.74L6.01 20H2.95L10.11 11.81L2.55 2H8.88L13.24 7.72L18.24 2Z"></path>
+          </svg>
+          @Yz_4u
+        </a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Current Package</h2>
+        <ul>
+          <li>ID: <code>com.yz4u.lockalive</code></li>
+          <li>Version: <code>1.0.0</code></li>
+          <li>Architecture: <code>iphoneos-arm64</code></li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Source URL</h2>
+        <p><a href="https://yz4u.github.io/">https://yz4u.github.io/</a></p>
+      </article>
+      <article class="card full">
+        <h2>Repository Files</h2>
+        <ul>
+          <li><a href="./Packages">Packages</a></li>
+          <li><a href="./Packages.gz">Packages.gz</a></li>
+          <li><a href="./Release">Release</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="catalog">
+      <article class="tweak-card">
+        <img class="tweak-icon" src="./assets/lockalive-icon.svg" alt="LockAlive icon">
+        <div>
+          <h2 class="tweak-title">LockAlive</h2>
+          <div class="tweak-meta">
+            <span class="pill">com.yz4u.lockalive</span>
+            <span class="pill">v1.0.0</span>
+            <span class="pill">iphoneos-arm64</span>
+          </div>
+          <p class="tweak-desc">
+            Keep SSH/Wi-Fi reachable while locked. Designed for users who run remote commands or file transfer during lock state.
+          </p>
+          <p class="tweak-desc">
+            ロック中の SSH / Wi-Fi 接続を維持しやすくする tweak。ロック状態でもリモート作業を続けたい人向けです。
+          </p>
+          <div class="tweak-links">
+            <a href="./debs/com.yz4u.lockalive_1.0.0_iphoneos-arm64.deb">Download .deb</a>
+            <a href="./Packages">Package metadata</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+Origin: Yz4u
+Label: Yz4u Tweaks
+Suite: stable
+Version: 1.0
+Codename: ios
+Date: Sat, 21 Feb 2026 07:37:23 +0000
+Architectures: iphoneos-arm64
+Components: main
+Description: Yz4u JB Comfort Project repository
+MD5Sum:
+ 7c3be7ba31aed653b98f2c22b2e499e0 441 Packages
+ fa1875a5c1498320431a1b12cc6cf181 334 Packages.gz
+SHA1:
+ 55417f28e8c81e34e7de980e3a5d537e93cb27a4 441 Packages
+ 204f8b9ec14fbb2392cfe822331eca031906c24d 334 Packages.gz
+SHA256:
+ 44388777d976c077d3ede0cec3e1c121b752c90bf3a678dfeef3a4bf17c3b35c 441 Packages
+ b25cff0cb2339e9d43f11cf9c177e1dddfe232ff7977391cf667e5736222d9cd 334 Packages.gz

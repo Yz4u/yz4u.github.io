@@ -41,22 +41,11 @@
       backdrop-filter: blur(10px);
     }
     .handle {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
       margin: 0;
-      text-decoration: none;
-      color: var(--text);
       font-size: clamp(24px, 6vw, 34px);
       line-height: 1.1;
       font-weight: 600;
       letter-spacing: -0.02em;
-    }
-    .handle-icon {
-      width: 20px;
-      height: 20px;
-      display: block;
-      border-radius: 5px;
     }
     .lead {
       margin: 12px 0 0;
@@ -194,12 +183,13 @@
 <body>
   <main>
     <section class="hero">
-      <a class="handle" href="https://x.com/Yz_4u" target="_blank" rel="noopener noreferrer">
-        <img class="handle-icon" src="./assets/x-icon.svg" alt="X">
-        <span>Yz · @Yz_4u</span>
-      </a>
+      <h1 class="handle">Yz</h1>
       <p class="lead">iOS tweak Dev / AI agents Dev</p>
       <div class="actions">
+        <a class="btn" href="https://x.com/Yz_4u" target="_blank" rel="noopener noreferrer">
+          <img class="btn-icon" src="./assets/x-icon.svg" alt="X">
+          @Yz_4u
+        </a>
         <a class="btn" href="sileo://source/https://yz4u.github.io/">
           <img class="btn-icon" src="./assets/sileo-icon.png" alt="Sileo">
           Add to Sileo

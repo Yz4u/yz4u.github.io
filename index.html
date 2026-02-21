@@ -40,11 +40,23 @@
       box-shadow: 0 18px 40px rgba(12, 19, 34, 0.1);
       backdrop-filter: blur(10px);
     }
-    .hero-title {
+    .handle {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
       margin: 0;
-      font-size: clamp(30px, 7vw, 48px);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
+      text-decoration: none;
+      color: var(--text);
+      font-size: clamp(24px, 6vw, 34px);
+      line-height: 1.1;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .handle svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+      fill: currentColor;
     }
     .lead {
       margin: 12px 0 0;
@@ -109,6 +121,25 @@
       display: grid;
       gap: 12px;
     }
+    .env-island {
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+    }
+    .env-title {
+      margin: 0 0 8px;
+      font-size: 15px;
+      letter-spacing: 0.01em;
+      color: #2d3d50;
+    }
+    .env-text {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
     .tweak-card {
       display: grid;
       grid-template-columns: 72px 1fr;
@@ -163,20 +194,24 @@
 <body>
   <main>
     <section class="hero">
-      <h1 class="hero-title">Easy For You</h1>
+      <a class="handle" href="https://x.com/Yz_4u" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18.24 2H21.31L14.61 9.66L22.49 20H16.32L11.49 13.74L6.01 20H2.95L10.11 11.81L2.55 2H8.88L13.24 7.72L18.24 2Z"></path>
+        </svg>
+        <span>Yz</span>
+      </a>
       <p class="lead">iOS tweak Dev / AI agents Dev</p>
       <div class="actions">
         <a class="btn" href="sileo://source/https://yz4u.github.io/">
           <img class="btn-icon" src="./assets/sileo-icon.png" alt="Sileo">
           Add to Sileo
         </a>
-        <a class="btn" href="https://x.com/Yz_4u" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M18.24 2H21.31L14.61 9.66L22.49 20H16.32L11.49 13.74L6.01 20H2.95L10.11 11.81L2.55 2H8.88L13.24 7.72L18.24 2Z"></path>
-          </svg>
-          @Yz_4u
-        </a>
       </div>
+    </section>
+
+    <section class="env-island">
+      <h2 class="env-title">開発環境</h2>
+      <p class="env-text">MacBook Pro M4 / JB test デバイス: iPhone 14 Plus / iPhone 13 Pro</p>
     </section>
 
     <section class="catalog">

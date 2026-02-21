@@ -52,11 +52,11 @@
       font-weight: 600;
       letter-spacing: -0.02em;
     }
-    .handle svg {
+    .handle-icon {
       width: 20px;
       height: 20px;
       display: block;
-      fill: currentColor;
+      border-radius: 5px;
     }
     .lead {
       margin: 12px 0 0;
@@ -195,10 +195,8 @@
   <main>
     <section class="hero">
       <a class="handle" href="https://x.com/Yz_4u" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M18.24 2H21.31L14.61 9.66L22.49 20H16.32L11.49 13.74L6.01 20H2.95L10.11 11.81L2.55 2H8.88L13.24 7.72L18.24 2Z"></path>
-        </svg>
-        <span>Yz</span>
+        <img class="handle-icon" src="./assets/x-icon.svg" alt="X">
+        <span>Yz · @Yz_4u</span>
       </a>
       <p class="lead">iOS tweak Dev / AI agents Dev</p>
       <div class="actions">
@@ -210,8 +208,8 @@
     </section>
 
     <section class="env-island">
-      <h2 class="env-title">開発環境</h2>
-      <p class="env-text">MacBook Pro M4 / JB test デバイス: iPhone 14 Plus / iPhone 13 Pro</p>
+      <h2 class="env-title">Development Environment</h2>
+      <p class="env-text">MacBook Pro M4 / JB test devices: iPhone 14 Plus / iPhone 13 Pro</p>
     </section>
 
     <section class="catalog">
@@ -225,9 +223,6 @@
           </div>
           <p class="tweak-desc">
             Keep SSH/Wi-Fi reachable while locked. Designed for users who run remote commands or file transfer during lock state.
-          </p>
-          <p class="tweak-desc">
-            ロック中の SSH / Wi-Fi 接続を維持しやすくする tweak。ロック状態でもリモート作業を続けたい人向けです。
           </p>
         </div>
       </article>
